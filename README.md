@@ -4,7 +4,7 @@
 ## Installation 
 
 ``` bash
-cargo add smplfetch
+cargo install smplfetch
 ```
 
 ## Authors
