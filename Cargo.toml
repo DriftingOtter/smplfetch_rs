@@ -7,7 +7,6 @@ authors = ["Daksh Kaul", "daksh <dakshkaul7790@gmail.com>"]
 license = "GPL-2.0-or-later"
 repository = "https://github.com/DriftingOtter/smplfetch_rs.git"
 readme = "README.md"
-keywords = ["fetch script", "fetch", "sysinfo", "system fetch"]
 
 [dependencies]
 chrono = "0.4.38"
