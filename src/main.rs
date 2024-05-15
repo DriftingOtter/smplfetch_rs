@@ -26,21 +26,18 @@ fn get_current_time() -> String {
 }
 
 
-fn get_memory_useage() -> String { 
+fn get_memory_useage() -> String {
     let sys = sysinfo::System::new_all();
 
-    let mut avalible_memory = sys.free_memory() as u64;
-    let mut used_memory     = sys.used_memory() as u64;
+    let total_memory = sys.total_memory() as u64;
+    let used_memory  = sys.used_memory() as u64;
 
-    avalible_memory = avalible_memory / (1024 * 1024 * 1024);
-    used_memory     = used_memory     / (1024 * 1024 * 1024);
+    let total_gb = total_memory / (1024 * 1024 * 1024);
+    let used_gb  = used_memory  / (1024 * 1024 * 1024);
 
-    avalible_memory.to_string();
-    used_memory.to_string();
+    let memory_usage = format!("{}/{} GB", used_gb, total_gb);
 
-    let memory_useage = used_memory.to_string() + "/" + avalible_memory.to_string().as_str() + " GB";
-
-    return memory_useage;
+    return memory_usage;
 }
 
 

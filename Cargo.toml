@@ -1,21 +1,20 @@
 [package]
 name = "smplfetch"
-discription = "A simple fetch script... but in rust!"
+description = "A simple fetch script... but in Rust!"
 version = "0.1.0"
-rust-version = "1.76.0"
 edition = "2021"
 authors = ["Daksh Kaul", "daksh <dakshkaul7790@gmail.com>"]
-readme = "README.md"
-repository = "https://github.com/DriftingOtter/smplfetch_rs.git"
 license = "GPL-3.0 license"
+repository = "https://github.com/DriftingOtter/smplfetch_rs.git"
+readme = "README.md"
 keywords = ["fetch script", "fetch", "sysinfo", "system fetch"]
-
-
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 chrono = "0.4.38"
 sysinfo = "0.30.12"
 termcolor = "1.4.1"
 whoami = "1.5.1"
+
+[package.metadata.docs.rs]
+features = ["default"]
+
