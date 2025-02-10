@@ -9,9 +9,8 @@ repository = "https://github.com/DriftingOtter/smplfetch_rs.git"
 readme = "README.md"
 
 [dependencies]
-async-std = "1.12.0"
 chrono = "0.4.38"
-sysinfo = "0.30.12"
+sysinfo = "0.33.1"
 termcolor = "1.4.1"
 whoami = "1.5.1"
 

@@ -1,21 +1,11 @@
 use chrono;
+use whoami;
+use sysinfo;
 use std::env;
 use std::fs::File;
-use std::io::{BufRead, BufReader};
 use std::path::Path;
+use std::io::{BufRead, BufReader};
 use termcolor::{Color, ColorSpec, StandardStream, WriteColor};
-
-fn get_username() -> String {
-    return whoami::username();
-}
-
-fn get_distrobution_name() -> String {
-    return whoami::distro();
-}
-
-fn get_cpu_architecture() -> whoami::Arch {
-    return whoami::arch();
-}
 
 fn get_current_time() -> String {
     return chrono::Local::now().time().format("%H:%M").to_string();
@@ -107,9 +97,9 @@ fn main() {
     println!("⎮          ⎮{}⎮         ⎮", get_current_time());
     println!("⎩                          ⎭");
 
-    println!("User: {}", get_username());
-    println!("Dist: {}", get_distrobution_name());
-    println!("Krnl: {}", get_cpu_architecture());
+    println!("User: {}", whoami::username());
+    println!("Dist: {}", whoami::distro());
+    println!("Krnl: {}", whoami::arch());
 
     println!("Memory: {}", get_memory_useage());
     println!("Battry: {}", get_battery_percentage());
