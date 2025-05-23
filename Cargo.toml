@@ -1,19 +1,19 @@
 [package]
-name = "smplfetch"
+name        = "smplfetch"
 description = "A simple fetch script... but in Rust!"
-version = "0.1.1"
-edition = "2021"
-authors = ["Daksh Kaul", "daksh <dakshkaul7790@gmail.com>"]
-license = "GPL-2.0-or-later"
-repository = "https://github.com/DriftingOtter/smplfetch_rs.git"
-readme = "README.md"
+version     = "0.2.0"
+edition     = "2021"
+authors     = ["Daksh Kaul <dakshkaul7790@gmail.com>"]
+license     = "GPL-2.0-or-later"
+repository  = "https://github.com/DriftingOtter/smplfetch_rs.git"
+readme      = "README.md"
 
 [dependencies]
-chrono = "0.4.38"
-sysinfo = "0.33.1"
-termcolor = "1.4.1"
-whoami = "1.5.1"
-
-[package.metadata.docs.rs]
-features = ["default"]
+chrono      = "0.4.41"
+clap        = { version = "4.5.38", features = ["derive"] }
+serde       = { version = "1.0.219", features = ["derive"] }
+serde_json  = "1.0.140"
+sysinfo     = "0.35.1"
+termcolor   = "1.4.1"
+whoami      = "1.6.0"
 
